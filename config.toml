@@ -3,6 +3,67 @@
     extended = true
     min = "0.62.0"
 
+[languages]
+  [languages.en]
+    weight = 1
+    title = "My New Hugo Site"
+    languageCode = "en"
+    languageName = "English"
+    [[languages.en.menu.main]]
+      weight = 1
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posts"
+      url = "/posts/"
+      title = ""
+    [[languages.en.menu.main]]
+      weight = 2
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Tags"
+      url = "/tags/"
+      title = ""
+    [[languages.en.menu.main]]
+      weight = 3
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+    [languages.es]
+      weight = 3
+      title = "Mi nuevo sitio de Hugo"
+      languageCode = "es"
+      languageName = "Español"
+      [[languages.fr.menu.main]]
+        weight = 1
+        identifier = "posts"
+        pre = ""
+        post = ""
+        name = "Posts"
+        url = "/posts/"
+        title = ""
+      [[languages.fr.menu.main]]
+        weight = 2
+        identifier = "tags"
+        pre = ""
+        post = ""
+        name = "Etiquetas"
+        url = "/tags/"
+        title = ""
+      [[languages.fr.menu.main]]
+        weight = 3
+        identifier = "categories"
+        name = "Categorias"
+        pre = ""
+        post = ""
+        url = "/categories/"
+        title = ""
+
+
 [params]
   # site default theme ["auto", "light", "dark"]
   # 网站默认主题 ["auto", "light", "dark"]
