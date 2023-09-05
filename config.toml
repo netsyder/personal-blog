@@ -34,7 +34,7 @@
       url = "/categories/"
       title = ""
     [languages.es]
-      weight = 3
+      weight = 2
       title = "Mi nuevo sitio de Hugo"
       languageCode = "es"
       languageName = "Español"
