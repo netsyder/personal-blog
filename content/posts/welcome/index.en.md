@@ -16,7 +16,7 @@ categories: ["Blog"]
 
 lightgallery: true
 ---
-# Welcome to my blog
+## Welcome to my blog
 
 From some time I've been looking for a way to try out new technologies and concepts, and at the same time showcase the knowledge that I've been aquiring... After some thought the answer became pretty obvious: MAKE A BLOG!
 

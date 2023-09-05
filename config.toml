@@ -8,7 +8,7 @@
     weight = 1
     title = "NETSYDER.COM"
     languageCode = "en"
-    languageName = "English :flag_united_kingdom:"
+    languageName = "English 🇬🇧"
     [[languages.en.menu.main]]
       weight = 1
       identifier = "posts"
@@ -37,7 +37,7 @@
       weight = 2
       title = "NETSYDER.COM"
       languageCode = "es"
-      languageName = "Español :flag_spain:"
+      languageName = "Español 🇪🇸"
       [[languages.es.menu.main]]
         weight = 1
         identifier = "posts"
@@ -107,7 +107,7 @@
     # Custom content (HTML format is supported)
     custom = ""
     # whether to show Hugo and theme info
-    hugo = true
+    hugo = false
     # whether to show copyright info
     copyright = true
     # whether to show the author

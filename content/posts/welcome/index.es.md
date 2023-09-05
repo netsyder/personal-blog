@@ -16,7 +16,7 @@ categories: ["Blog"]
 
 lightgallery: true
 ---
-# Bienvenid@ a mi blog
+## Bienvenid@ a mi blog
 
 Desde hace un tiempo he estado buscando una manera de probar nuevas tecnologías y conceptos, a la vez que puedo presentar los conocimientos que he ido adquiriendo con el tiempo... Después de pensarlo mucho la repuesta se volvio super obvia: HACER UN BLOG!
 
@@ -28,4 +28,4 @@ Gracias por pasar por aquí y espero que el tiempo que inviertas leyendo mi blog
 
 Hasta la próxima!
 
-- _Bersayder_
+_- Bersayder_
