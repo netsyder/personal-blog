@@ -28,4 +28,4 @@ Thanks for checking this out and I hope that the time you spend in here helps yo
 
 See you in the next one.
 
-- _Bersayder_
+ _- Bersayder_

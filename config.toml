@@ -6,9 +6,9 @@
 [languages]
   [languages.en]
     weight = 1
-    title = "My New Hugo Site"
+    title = "NETSYDER.COM"
     languageCode = "en"
-    languageName = "English"
+    languageName = "English :flag_united_kingdom:"
     [[languages.en.menu.main]]
       weight = 1
       identifier = "posts"
@@ -35,9 +35,9 @@
       title = ""
     [languages.es]
       weight = 2
-      title = "Mi nuevo sitio de Hugo"
+      title = "NETSYDER.COM"
       languageCode = "es"
-      languageName = "Español"
+      languageName = "Español :flag_spain:"
       [[languages.es.menu.main]]
         weight = 1
         identifier = "posts"
@@ -154,7 +154,7 @@
 
   # Search config
   [params.search]
-    enable = false
+    enable = true
     # type of search engine ["lunr", "algolia"]
     type = "lunr"
     # max index length of the chunked content
@@ -184,7 +184,7 @@
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = "bersayder.mejia@gmail.com"
       # URL of avatar shown in home page
-      avatarURL = "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortFlat&accessoriesType=Prescription02&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=Hoodie&clotheColor=Black&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Twinkle&skinColor=Brown"
+      avatarURL = "/images/avatar.png"
       # title shown in home page (HTML format is supported)
       title = ""
       # subtitle shown in home page (HTML format is supported)
@@ -202,17 +202,17 @@
       paginate = 6
   # Social config in home page
   [params.social]
-    GitHub = "https://github.com/netsyder/"
-    Linkedin = "https://www.linkedin.com/in/bersayder/"
-    Twitter = "https://twitter.com/bersayder"
+    GitHub = "netsyder"
+    Linkedin = "bersayder"
+    Twitter = "bersayder"
     Instagram = ""
     Facebook = ""
-    Telegram = "https://t.me/bersayder"
+    Telegram = "bersayder"
     Medium = ""
     Gitlab = ""
     Youtubelegacy = ""
-    Youtubecustom = "https://www.youtube.com/@netsyder "
-    Youtubechannel = "https://www.youtube.com/channel/UCmllRUbBHxxeIxYArwtECSQ"
+    Youtubecustom = ""
+    Youtubechannel = "UCmllRUbBHxxeIxYArwtECSQ"
     Tumblr = ""
     Quora = ""
     Keybase = ""
@@ -346,20 +346,20 @@
       enable = true
       Twitter = true
       Facebook = true
-      Linkedin = false
+      Linkedin = true
       Whatsapp = false
       Pinterest = false
       Tumblr = false
-      HackerNews = true
+      HackerNews = false
       Reddit = false
       VK = false
       Buffer = false
       Xing = false
-      Line = true
+      Line = false
       Instapaper = false
       Pocket = false
       Flipboard = false
-      Weibo = true
+      Weibo = false
       Blogger = false
       Baidu = false
       Odnoklassniki = false
