@@ -93,7 +93,7 @@
       # URL of the LOGO
       logo = "/images/NetsyderWord.png"
       # title name
-      name = "NETSYDER"
+      name = ""
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
