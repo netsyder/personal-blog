@@ -91,7 +91,7 @@
     # Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = ""
+      logo = "/images/NetsyderWord.png"
       # title name
       name = "NETSYDER"
       # you can add extra information before the name (HTML format is supported), such as icons
