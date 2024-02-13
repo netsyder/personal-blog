@@ -6,7 +6,7 @@
 [languages]
   [languages.en]
     weight = 1
-    title = "NETSYDER.COM"
+    title = "NETSYDER"
     languageCode = "en"
     languageName = "English 🇬🇧"
     [[languages.en.menu.main]]
@@ -35,7 +35,7 @@
       title = ""
     [languages.es]
       weight = 2
-      title = "NETSYDER.COM"
+      title = "NETSYDER"
       languageCode = "es"
       languageName = "Español 🇪🇸"
       [[languages.es.menu.main]]
