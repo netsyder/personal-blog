@@ -91,13 +91,13 @@
     # Header title config
     [params.header.title]
       # URL of the LOGO
-      logo = "/images/logo.png"
+      logo = "" # "/images/logo.png"
       # title name
       name = ""
       # you can add extra information before the name (HTML format is supported), such as icons
-      pre = ""
+      pre = "NET"
       # you can add extra information after the name (HTML format is supported), such as icons
-      post = ""
+      post = <font color="#65c9ff">SYDER</font>
       # whether to use typeit animation for title name
       typeit = false
 
