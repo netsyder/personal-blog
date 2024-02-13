@@ -97,7 +97,7 @@
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
-      post = "<font color='#65c9ff'>SYDER</font>"
+      post = "NET<font color='#65c9ff'>SYDER</font>"
       # whether to use typeit animation for title name
       typeit = false
 
