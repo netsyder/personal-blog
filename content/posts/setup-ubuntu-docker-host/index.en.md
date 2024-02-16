@@ -5,7 +5,7 @@ lastmod:
 draft: false
 author: "Bersayder"
 authorLink: "https://netsyder.com"
-description: "This is part of a series of tutorials  
+description: "First of a series of tutorials about my homelab in no particular order " 
 images: []
 resources:
 - name: "featured-image"
