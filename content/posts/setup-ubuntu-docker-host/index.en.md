@@ -1,7 +1,7 @@
 ---
 title: "How to setup Ubuntu as a Docker Host"
 date: 2024-02-16T02:35:45.517Z
-lastmod: 
+lastmod: 2024-02-16T02:50:16.235Z
 draft: false
 author: "Bersayder"
 authorLink: "https://netsyder.com"
@@ -30,18 +30,19 @@ The steps are as follows:
 1. Install docker
 1. Install portainer
 
-#Fix Network Config for IP Address Reservation
+# Fix Network Config for IP Address Reservation
 
 What do I mean by this? Basically Ubuntu uses a Client-ID that is not the MAC Address when sending a DHCP request. This means that if you create an IP reservation on your DHCP server, *maybe* your Ubuntu server will receive a different IP address instead of said reservation. This depends entirely on the behavior of the DHCP server, but to prevent this issue we can force our server to use its MAC Address as the Client-ID.
 
 To set Ubuntu to use it's MAC as the Client-ID we need to edit the netplan config file located in `/etc/netplan/`
 
-```bash
+```sh
 sudo nano /etc/netplan/00-installer-config.yaml
 ```
+
 We are going to set our file as follows:
 
-```bash
+```sh
 # This is the network config written by 'subiquity'
 network:
   ethernets:
