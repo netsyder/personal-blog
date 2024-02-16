@@ -1,7 +1,7 @@
 ---
 title: "How to setup Ubuntu as a Docker Host"
 date: 2024-02-16T02:35:45.517Z
-lastmod: 2024-02-16T04:23:07.903Z
+lastmod: {{ .Date }}
 draft: false
 author: "Bersayder"
 authorLink: "https://netsyder.com"
@@ -28,6 +28,7 @@ The steps are as follows:
 2. [Setup Cockpit](#setup-cockpit)
 3. [Setup Docker](#setup-docker)
 4. [Setup Portainer](#setup-portainer)
+
 ---
 ## Fix Network Config for IP Address Reservation 
 
@@ -53,6 +54,7 @@ network:
   version: 2
   renderer: NetworkManager
 ```
+
 Here we ensure Ubuntu uses its MAC address when requesting DHCP, we manually set the DNS servers and make sure it uses Network Manager as the network config renderer.
 
 ### Change DNS Behavior (Optional, but needed to host Pi-Hole)
@@ -66,6 +68,7 @@ sudo systemctl disable systemd-resolved.service && sudo systemctl stop systemd-r
 Set your DNS server in `/etc/resolv.conf` to your prefered DNS server instead of 127.0.0.53.
 
 ---
+
 ## Setup Cockpit
 
 Cockpit is a web-based GUI for management servers that typically ships with RHEL-based distributions such as Red Hat Enterprise Linux, CentOS Stream, Rocky Linux and AlmaLinux. It’s a great way to keep tabs on your servers, manage users/groups/storage/services, update software, view logs and so much more.
@@ -96,6 +99,7 @@ Open a web browser and point it to https://SERVER:9090. You should be greeted by
 
 <!---This is a placeholder for an image--->
 ---
+
 ## Setup Docker
 
 ### Install Docker from the repository
@@ -112,21 +116,29 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 # Add the repository to Apt sources:
 echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \
+  https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
+
 2. Install the Docker Packages:
 
 ```bash
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install \
+  docker-ce docker-ce-cli \
+  containerd.io \
+  docker-buildx-plugin \
+  docker-compose-plugin
 ```
+
 3. Verify that the Docker Engine installation is successful by running the `hello-world` image.
 
 ```bash
 sudo docker run hello-world
 ```
+
 ### Manage Docker as a non-root user
 
 The Docker daemon binds to a Unix socket, not a TCP port. By default it's the root user that owns the Unix socket, and other users can only access it using sudo. The Docker daemon always runs as the root user.
@@ -138,24 +150,27 @@ To create the `docker` group and add your user:
 1. Create the `docker` group:
 
 ```bash
- sudo groupadd docker
+sudo groupadd docker
 ```
 
 2. Add your user to the docker group:
 
 ```bash
- sudo usermod -aG docker $USER
+sudo usermod -aG docker $USER
 ```
+
 3. Log out and log back in so that your group membership is re-evaluated. You can also run the following command to activate the changes to groups:
 
 ```bash
 newgrp docker
 ```
+
 4. Verify that you can run `docker` commands without `sudo`:
 
 ```bash
 docker run hello-world
 ```
+
 ### Configure Docker to start on boot with systemd
 
 On Debian and Ubuntu, the Docker service starts on boot by default. To automatically start Docker and containerd on boot for other Linux distributions using systemd, run the following commands:
@@ -164,7 +179,9 @@ On Debian and Ubuntu, the Docker service starts on boot by default. To automatic
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
+
 ---
+
 ## Setup Portainer
 
 First, create the volume that Portainer Server will use to store its database:
@@ -172,22 +189,24 @@ First, create the volume that Portainer Server will use to store its database:
 ```bash
 docker volume create portainer_data
 ```
+
 Then, download and install the Portainer Server container:
-```bash
-docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
-```
-Portainer Server has now been installed. You can check to see whether the Portainer Server container has started by running `docker ps`:
 
 ```bash
-root@server:~# docker ps
-CONTAINER ID   IMAGE                          COMMAND                  CREATED       STATUS      PORTS                                                                                  NAMES             
-dbf6a6d5019f   portainer/portainer-ce:latest  "/portainer"             4 weeks ago   Up 3 days   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp   portainer
+docker run -d -p 8000:8000 -p 9443:9443 \
+ --name portainer --restart=always \
+ -v /var/run/docker.sock:/var/run/docker.sock \
+ -v portainer_data:/data portainer/portainer-ce:latest
 ```
+
+Portainer Server has now been installed. You can check to see whether the Portainer Server container has started by running `docker ps`:
+
 Now that the installation is complete, you can log into your Portainer Server instance by opening a web browser and going to:
 
 ```bash
 https://localhost:9443
 ```
+
 Replace localhost with the relevant IP address or FQDN if needed, and adjust the port if you changed it earlier.
 
 You will be presented with the initial setup page for Portainer Server.
