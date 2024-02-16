@@ -63,7 +63,9 @@ By default Ubuntu uses resolvd for DNS resolution, which means it points all DNS
 ```shell
 sudo systemctl disable systemd-resolved.service && sudo systemctl stop systemd-resolved
 ```
+
 Set your DNS server in `/etc/resolv.conf` to your prefered DNS server instead of 127.0.0.53.
+
 ---
 # Setup Cockpit
 
