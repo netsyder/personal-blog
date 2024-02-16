@@ -1,7 +1,7 @@
 ---
 title: "How to setup Ubuntu as a Docker Host"
 date: 2024-02-16T02:35:45.517Z
-lastmod: {{ .Date }}
+lastmod: 2024-02-16T15:02:03.013Z
 draft: false
 author: "Bersayder"
 authorLink: "https://netsyder.com"
