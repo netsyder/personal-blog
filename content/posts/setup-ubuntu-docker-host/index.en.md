@@ -35,9 +35,11 @@ What do I mean by this? Basically Ubuntu uses a Client-ID that is not the MAC Ad
 
 To set Ubuntu to use it's MAC as the Client-ID we need to edit the network configuration file located in `/etc/netplan/`. For that we issue the command:
 
-```bash
-sudo nano /etc/netplan/00-installer-config.yaml
-```
+<pre language-bash>
+  <code>
+    sudo nano /etc/netplan/00-installer-config.yaml
+  </code>
+</pre>
 
 We are going to set our file as follows:
 
