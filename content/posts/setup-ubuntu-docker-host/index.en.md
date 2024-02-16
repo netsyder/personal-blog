@@ -30,7 +30,7 @@ The steps are as follows:
 3. Setup Docker
 4. Setup Portainer
 ---
-# Fix Network Config for IP Address Reservation
+## Fix Network Config for IP Address Reservation
 
 What do I mean by this? Basically Ubuntu uses a Client-ID that is not the MAC Address when sending a DHCP request. This means that if you create an IP reservation on your DHCP server, *maybe* your Ubuntu server will receive a different IP address instead of said reservation. This depends entirely on the behavior of the DHCP server, but to prevent this issue we can force our server to use its MAC Address as the Client-ID.
 
@@ -56,7 +56,7 @@ network:
 ```
 Here we ensure Ubuntu uses its MAC address when requesting DHCP, we manually set the DNS servers and make sure it uses Network Manager as the network config renderer.
 
-## Change DNS Behavior (Optional, but needed to host Pi-Hole)
+### Change DNS Behavior (Optional, but needed to host Pi-Hole)
 
 By default Ubuntu uses resolvd for DNS resolution, which means it points all DNS request to the loopback IP 127.0.0.53. This is not an issue by itself, but it means that Ubuntu also keeps listening on port 53, which doesn't allows to host any service listening on this port. If you want to host Pi-Hole (Or any DNS server) on your Ubuntu instance, then we need to change this behavior by disabling resolved:
 
@@ -67,7 +67,7 @@ sudo systemctl disable systemd-resolved.service && sudo systemctl stop systemd-r
 Set your DNS server in `/etc/resolv.conf` to your prefered DNS server instead of 127.0.0.53.
 
 ---
-# Setup Cockpit
+## Setup Cockpit
 
 Cockpit is a web-based GUI for management servers that typically ships with RHEL-based distributions such as Red Hat Enterprise Linux, CentOS Stream, Rocky Linux and AlmaLinux. It’s a great way to keep tabs on your servers, manage users/groups/storage/services, update software, view logs and so much more.
 
@@ -75,7 +75,7 @@ Although Cockpit does come pre-installed with some of the RHEL-based Linux distr
 
 Let’s do just that.
 
-## Install Cockpit
+### Install Cockpit
 
 Log into your Ubuntu Server instance and issue the command:
 
@@ -87,15 +87,15 @@ Once the installation completes, start and enable Cockpit with:
 
 Now that Cockpit is installed and running, you can log in.
 
-## Log into Cockpit
+### Log into Cockpit
 
 Open a web browser and point it to https://SERVER:9090. You should be greeted by the login screen (Figure A).
 
 <!---This is a placeholder for an image--->
 ---
-# Setup Docker
+## Setup Docker
 
-## Install Docker from the repository
+### Install Docker from the repository
 
 1. Set up Docker's `apt` repository.
 
@@ -124,7 +124,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 ```shell
 sudo docker run hello-world
 ```
-## Manage Docker as a non-root user
+### Manage Docker as a non-root user
 
 The Docker daemon binds to a Unix socket, not a TCP port. By default it's the root user that owns the Unix socket, and other users can only access it using sudo. The Docker daemon always runs as the root user.
 
@@ -153,7 +153,7 @@ newgrp docker
 ```shell
 docker run hello-world
 ```
-## Configure Docker to start on boot with systemd
+### Configure Docker to start on boot with systemd
 
 On Debian and Ubuntu, the Docker service starts on boot by default. To automatically start Docker and containerd on boot for other Linux distributions using systemd, run the following commands:
 
@@ -162,7 +162,7 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
 ---
-# Setup Portainer
+## Setup Portainer
 
 First, create the volume that Portainer Server will use to store its database:
 
