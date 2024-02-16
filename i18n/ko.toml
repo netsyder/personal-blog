@@ -1,200 +1,199 @@
-# Translations for Traditional Chinese
-# 繁體中文的翻譯
+# Translations for Korean
+# 한국어 번역
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
 # === baseof ==
 [backToTop]
-other = "回到頂部"
+other = "맨 위로"
 
 [viewComments]
-other = "查看評論"
+other = "댓글 보기"
 # === baseof ==
 
 # === Post ===
 [posts]
-other = "文章"
+other = "글"
 # === Post ===
 
 # === Taxonomy ===
 [allSome]
-other = "所有{{ .Some }}"
+other = "모든 {{ .Some }}"
 
 [tag]
-other = "標籤"
+other = "태그"
 
 [tags]
-other = "標籤"
+other = "태그"
 
 [category]
-other = "分類"
+other = "카테고리"
 
 [categories]
-other = "分類"
+other = "카테고리"
 # === Taxonomy ===
 
 # === Pagination ===
 [more]
-other = "更多"
+other = "더 보기"
 # === Pagination ===
 
 # === partials/header.html ===
 [selectLanguage]
-other = "選擇語言"
+other = "언어 변경"
 
 [switchTheme]
-other = "切換主題"
+other = "테마 변경"
 # === partials/header.html ===
 
 # === partials/footer.html ===
 [poweredBySome]
-other = "由 {{ .Hugo }} 強力驅動 | 主題 - {{ .Theme }}"
+other = "{{ .Hugo }}로 제작된 사이트 | 테마 - {{ .Theme }}"
 # === partials/footer.html ===
 
 # === partials/comment.html ===
 [valineLang]
-other = "zh-TW"
+other = "en"
 
 [valinePlaceholder]
-other = "你的評論 ..."
+other = "댓글 입력..."
 
 [facebookLanguageCode]
-other = "zh_TW"
+other = "ko-KR"
+
+[giscusLang]
+other = "ko"
 # === partials/comment.html ===
 
 # === partials/assets.html ===
 [search]
-other = "搜索"
+other = "검색"
 
 [searchPlaceholder]
-other = "搜索文章標題或內容..."
+other = "제목이나 내용을 입력..."
 
 [clear]
-other = "清空"
+other = "지우기"
 
 [cancel]
-other = "取消"
+other = "취소"
 
 [noResultsFound]
-other = "沒有找到結果"
+other = "검색 결과 없음"
 
 [lunrLanguageCode]
-other = "zh"
-
-[lunrLanguageLib]
-other = "lib/lunr/lunr.zh.js"
-
-[lunrSegmentitLib]
-other = "lib/lunr/lunr.segmentit.js"
+other = "en"
 
 [copyToClipboard]
-other = "複製到剪貼板"
+other = "복사하기"
 
 [cookieconsentMessage]
-other = "本網站使用 Cookies 來改善您的瀏覽體驗."
+other = "본 웹사이트는 웹 환경 개선을 위해 쿠키를 사용합니다."
 
 [cookieconsentDismiss]
-other = "同意"
+other = "알겠습니다"
 
 [cookieconsentLink]
-other = "了解更多"
+other = "더 보기"
 # === partials/assets.html ===
 
 # === partials/plugin/share.html ===
 [shareOn]
-other = "分享到"
+other = "공유하기"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===
 [contents]
-other = "目錄"
+other = "목차"
 
 [publishedOnDate]
-other = "發佈於 {{ .Date }}"
+other = "작성: {{ .Date }}"
 
 [includedInCategories]
-other = "收錄於 {{ .Categories }}"
+other = "분류: {{ .Categories }}"
 
 [wordCount]
-other = "約 {{ .Count }} 字"
+one = "한 단어"
+other = "{{ .Count }} 단어"
 
 [readingTime]
-other = "預計閱讀 {{ .Count }} 分鐘"
+one = "읽는데 약 1분"
+other = "읽는데 약 {{ .Count }}분"
 
 [views]
-other = "次閱讀"
+other = "조회"
 
 [author]
-other = "作者"
+other = "저자"
 
 [updatedOnDate]
-other = "更新於 {{ .Date }}"
+other = "수정: {{ .Date }}"
 
 [readMarkdown]
-other = "閱讀原始文檔"
+other = "마크다운 읽기"
 
 [back]
-other = "返回"
+other = "뒤로"
 
 [home]
-other = "主頁"
+other = "홈"
 
 [readMore]
-other = "閱讀全文"
+other = "더 읽기"
 # === posts/single.html ===
 
 # === 404.html ===
 [pageNotFound]
-other = "頁面沒找到"
+other = "Page not found"
 
 [pageNotFoundText]
-other = "抱歉，您要查找的頁面不存在。"
+other = "해당 페이지를 찾을 수 없습니다."
 # === 404.html ===
 
 # === shortcodes/admonition.html ===
 [note]
-other = "注意"
+other = "노트"
 
 [abstract]
-other = "摘要"
+other = "요약"
 
 [info]
-other = "信息"
+other = "정보"
 
 [tip]
-other = "技巧"
+other = "팁"
 
 [success]
-other = "成功"
+other = "성공"
 
 [question]
-other = "問題"
+other = "질문"
 
 [warning]
-other = "警告"
+other = "경고"
 
 [failure]
-other = "失敗"
+other = "실패"
 
 [danger]
-other = "危險"
+other = "위험"
 
 [bug]
-other = "Bug"
+other = "버그"
 
 [example]
-other = "示例"
+other = "예시"
 
 [quote]
-other = "引用"
+other = "인용"
 # === shortcodes/admonition.html ===
 
 # === shortcodes/version.html ===
 [new]
-other = "新增"
+other = "신규"
 
 [changed]
-other = "更改"
+other = "변경"
 
 [deleted]
-other = "刪除"
+other = "삭제"
 # === shortcodes/version.html ===

@@ -1,200 +1,199 @@
-# Translations for Traditional Chinese
-# 繁體中文的翻譯
+# Translations for Turkish
+# Türkçe Çeviriler
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
 # === baseof ==
 [backToTop]
-other = "回到頂部"
+other = "Başa Dön"
 
 [viewComments]
-other = "查看評論"
+other = "Yorumları Gör"
 # === baseof ==
 
 # === Post ===
 [posts]
-other = "文章"
+other = "İçerikler"
 # === Post ===
 
 # === Taxonomy ===
 [allSome]
-other = "所有{{ .Some }}"
+other = "All {{ .Some }}"
 
 [tag]
-other = "標籤"
+other = "Etiket"
 
 [tags]
-other = "標籤"
+other = "Etiketler"
 
 [category]
-other = "分類"
+other = "Kategori"
 
 [categories]
-other = "分類"
+other = "Kategoriler"
 # === Taxonomy ===
 
 # === Pagination ===
 [more]
-other = "更多"
+other = "Daha fazla"
 # === Pagination ===
 
 # === partials/header.html ===
 [selectLanguage]
-other = "選擇語言"
+other = "Dil Seç"
 
 [switchTheme]
-other = "切換主題"
+other = "Switch Theme"
 # === partials/header.html ===
 
 # === partials/footer.html ===
 [poweredBySome]
-other = "由 {{ .Hugo }} 強力驅動 | 主題 - {{ .Theme }}"
+other = "{{ .Hugo }} ile yapıldı | Tema - {{ .Theme }}"
 # === partials/footer.html ===
 
 # === partials/comment.html ===
 [valineLang]
-other = "zh-TW"
+other = "en"
 
 [valinePlaceholder]
-other = "你的評論 ..."
+other = "Yorumun..."
 
 [facebookLanguageCode]
-other = "zh_TW"
+other = "tr_TR"
+
+[giscusLang]
+other = "tr"
 # === partials/comment.html ===
 
 # === partials/assets.html ===
 [search]
-other = "搜索"
+other = "Arama"
 
 [searchPlaceholder]
-other = "搜索文章標題或內容..."
+other = "Başlık yada içerik arama..."
 
 [clear]
-other = "清空"
+other = "Temizle"
 
 [cancel]
-other = "取消"
+other = "İptal"
 
 [noResultsFound]
-other = "沒有找到結果"
+other = "Sonuç bulunamadı"
 
 [lunrLanguageCode]
-other = "zh"
-
-[lunrLanguageLib]
-other = "lib/lunr/lunr.zh.js"
-
-[lunrSegmentitLib]
-other = "lib/lunr/lunr.segmentit.js"
+other = "tr"
 
 [copyToClipboard]
-other = "複製到剪貼板"
+other = "Panoya kopyala"
 
 [cookieconsentMessage]
-other = "本網站使用 Cookies 來改善您的瀏覽體驗."
+other = "Bu websitesi deneyiminizi iyileştirmek için çerezleri kullanmaktadır."
 
 [cookieconsentDismiss]
-other = "同意"
+other = "Anladım!"
 
 [cookieconsentLink]
-other = "了解更多"
+other = "Daha fazla öğren"
 # === partials/assets.html ===
 
 # === partials/plugin/share.html ===
 [shareOn]
-other = "分享到"
+other = "Şurada Paylaş"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===
 [contents]
-other = "目錄"
+other = "İçerikler"
 
 [publishedOnDate]
-other = "發佈於 {{ .Date }}"
+other = "{{ .Date }} tarihinde paylaşıldı"
 
 [includedInCategories]
-other = "收錄於 {{ .Categories }}"
+other = "{{ .Categories }} kategorileri içinde"
 
 [wordCount]
-other = "約 {{ .Count }} 字"
+one = "Bir kelime"
+other = "{{ .Count }} kelime"
 
 [readingTime]
-other = "預計閱讀 {{ .Count }} 分鐘"
+one = "One minute"
+other = "{{ .Count }} minutes"
 
 [views]
-other = "次閱讀"
+other = "görüntülenme"
 
 [author]
-other = "作者"
+other = "Yazar"
 
 [updatedOnDate]
-other = "更新於 {{ .Date }}"
+other = "{{ .Date }} tarihinde güncellendi"
 
 [readMarkdown]
-other = "閱讀原始文檔"
+other = "Markdown Oku"
 
 [back]
-other = "返回"
+other = "Geri"
 
 [home]
-other = "主頁"
+other = "Anasayfa"
 
 [readMore]
-other = "閱讀全文"
+other = "Daha fazla oku"
 # === posts/single.html ===
 
 # === 404.html ===
 [pageNotFound]
-other = "頁面沒找到"
+other = "Sayfa Bulunamadı"
 
 [pageNotFoundText]
-other = "抱歉，您要查找的頁面不存在。"
+other = "Aradığınız sayfa bulunamadı. Üzgünüz."
 # === 404.html ===
 
 # === shortcodes/admonition.html ===
 [note]
-other = "注意"
+other = "Not"
 
 [abstract]
-other = "摘要"
+other = "Öz"
 
 [info]
-other = "信息"
+other = "Bilgi"
 
 [tip]
-other = "技巧"
+other = "İpucu"
 
 [success]
-other = "成功"
+other = "Başarılı"
 
 [question]
-other = "問題"
+other = "Soru"
 
 [warning]
-other = "警告"
+other = "Uyarı"
 
 [failure]
-other = "失敗"
+other = "Başarısız"
 
 [danger]
-other = "危險"
+other = "Tehlike"
 
 [bug]
-other = "Bug"
+other = "Hata"
 
 [example]
-other = "示例"
+other = "Örnek"
 
 [quote]
-other = "引用"
+other = "Alıntı"
 # === shortcodes/admonition.html ===
 
 # === shortcodes/version.html ===
 [new]
-other = "新增"
+other = "YENİ"
 
 [changed]
-other = "更改"
+other = "DEĞİŞTİRİLDİ"
 
 [deleted]
-other = "刪除"
+other = "SİLİNDİ"
 # === shortcodes/version.html ===

@@ -1,200 +1,199 @@
-# Translations for Traditional Chinese
-# 繁體中文的翻譯
+# Translations for Indonesian
+# Terjemahan untuk Bahasa Indonesia
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
 # === baseof ==
 [backToTop]
-other = "回到頂部"
+other = "Kembali ke Atas"
 
 [viewComments]
-other = "查看評論"
+other = "Lihat Komentar"
 # === baseof ==
 
 # === Post ===
 [posts]
-other = "文章"
+other = "Pos"
 # === Post ===
 
 # === Taxonomy ===
 [allSome]
-other = "所有{{ .Some }}"
+other = "Semua {{ .Some }}"
 
 [tag]
-other = "標籤"
+other = "Label"
 
 [tags]
-other = "標籤"
+other = "Label"
 
 [category]
-other = "分類"
+other = "Kategori"
 
 [categories]
-other = "分類"
+other = "Kategori"
 # === Taxonomy ===
 
 # === Pagination ===
 [more]
-other = "更多"
+other = "Lainnya"
 # === Pagination ===
 
 # === partials/header.html ===
 [selectLanguage]
-other = "選擇語言"
+other = "Pilih Bahasa"
 
 [switchTheme]
-other = "切換主題"
+other = "Ganti Tema"
 # === partials/header.html ===
 
 # === partials/footer.html ===
 [poweredBySome]
-other = "由 {{ .Hugo }} 強力驅動 | 主題 - {{ .Theme }}"
+other = "Dipersembahkan oleh {{ .Hugo }} | Tema - {{ .Theme }}"
 # === partials/footer.html ===
 
 # === partials/comment.html ===
 [valineLang]
-other = "zh-TW"
+other = "en"
 
 [valinePlaceholder]
-other = "你的評論 ..."
+other = "Komentar Anda ..."
 
 [facebookLanguageCode]
-other = "zh_TW"
+other = "id_ID"
+
+[giscusLang]
+other = "id"
 # === partials/comment.html ===
 
 # === partials/assets.html ===
 [search]
-other = "搜索"
+other = "Cari"
 
 [searchPlaceholder]
-other = "搜索文章標題或內容..."
+other = "Cari judul atau konten ..."
 
 [clear]
-other = "清空"
+other = "Bersihkan"
 
 [cancel]
-other = "取消"
+other = "Batal"
 
 [noResultsFound]
-other = "沒有找到結果"
+other = "Hasil tidak ditemukan"
 
 [lunrLanguageCode]
-other = "zh"
-
-[lunrLanguageLib]
-other = "lib/lunr/lunr.zh.js"
-
-[lunrSegmentitLib]
-other = "lib/lunr/lunr.segmentit.js"
+other = "en"
 
 [copyToClipboard]
-other = "複製到剪貼板"
+other = "Salin ke papan klip"
 
 [cookieconsentMessage]
-other = "本網站使用 Cookies 來改善您的瀏覽體驗."
+other = "Situs ini menggunakan Cookies untuk meningkatkan pengalaman Anda."
 
 [cookieconsentDismiss]
-other = "同意"
+other = "Mengerti!"
 
 [cookieconsentLink]
-other = "了解更多"
+other = "Pelajari lebih lanjut"
 # === partials/assets.html ===
 
 # === partials/plugin/share.html ===
 [shareOn]
-other = "分享到"
+other = "Bagikan ke"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===
 [contents]
-other = "目錄"
+other = "Daftar Isi"
 
 [publishedOnDate]
-other = "發佈於 {{ .Date }}"
+other = "diterbitkan pada {{ .Date }}"
 
 [includedInCategories]
-other = "收錄於 {{ .Categories }}"
+other = "di {{ .Categories }}"
 
 [wordCount]
-other = "約 {{ .Count }} 字"
+one = "Satu kata"
+other = "{{ .Count }} kata"
 
 [readingTime]
-other = "預計閱讀 {{ .Count }} 分鐘"
+one = "Satu menit"
+other = "{{ .Count }} menit"
 
 [views]
-other = "次閱讀"
+other = "dilihat"
 
 [author]
-other = "作者"
+other = "Penulis"
 
 [updatedOnDate]
-other = "更新於 {{ .Date }}"
+other = "Diperbarui pada {{ .Date }}"
 
 [readMarkdown]
-other = "閱讀原始文檔"
+other = "Baca Markdown"
 
 [back]
-other = "返回"
+other = "Kembali"
 
 [home]
-other = "主頁"
+other = "Beranda"
 
 [readMore]
-other = "閱讀全文"
+other = "Baca Selengkapnya"
 # === posts/single.html ===
 
 # === 404.html ===
 [pageNotFound]
-other = "頁面沒找到"
+other = "Halaman tidak ditemukan"
 
 [pageNotFoundText]
-other = "抱歉，您要查找的頁面不存在。"
+other = "Maaf, halaman yang Anda cari tidak ada."
 # === 404.html ===
 
 # === shortcodes/admonition.html ===
 [note]
-other = "注意"
+other = "Catatan"
 
 [abstract]
-other = "摘要"
+other = "Abstrak"
 
 [info]
-other = "信息"
+other = "Info"
 
 [tip]
-other = "技巧"
+other = "Kiat"
 
 [success]
-other = "成功"
+other = "Sukses"
 
 [question]
-other = "問題"
+other = "Pertanyaan"
 
 [warning]
-other = "警告"
+other = "Peringatan"
 
 [failure]
-other = "失敗"
+other = "Kegagalan"
 
 [danger]
-other = "危險"
+other = "Bahaya"
 
 [bug]
 other = "Bug"
 
 [example]
-other = "示例"
+other = "Contoh"
 
 [quote]
-other = "引用"
+other = "Kutipan"
 # === shortcodes/admonition.html ===
 
 # === shortcodes/version.html ===
 [new]
-other = "新增"
+other = "BARU"
 
 [changed]
-other = "更改"
+other = "BERUBAH"
 
 [deleted]
-other = "刪除"
+other = "DIHAPUS"
 # === shortcodes/version.html ===

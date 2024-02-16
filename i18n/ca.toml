@@ -1,200 +1,199 @@
-# Translations for Traditional Chinese
-# 繁體中文的翻譯
+# Translations for Catalan
+# Traducció al Català
 # https://gohugo.io/content-management/multilingual/#translation-of-strings
 
 # === baseof ==
 [backToTop]
-other = "回到頂部"
+other = "Torna a L'inici"
 
 [viewComments]
-other = "查看評論"
+other = "Visualitza Comentaris"
 # === baseof ==
 
 # === Post ===
 [posts]
-other = "文章"
+other = "Publicacions"
 # === Post ===
 
 # === Taxonomy ===
 [allSome]
-other = "所有{{ .Some }}"
+other = "Tot {{ .Some }}"
 
 [tag]
-other = "標籤"
+other = "Etiqueta"
 
 [tags]
-other = "標籤"
+other = "Etiquetes"
 
 [category]
-other = "分類"
+other = "Categoria"
 
 [categories]
-other = "分類"
+other = "Categories"
 # === Taxonomy ===
 
 # === Pagination ===
 [more]
-other = "更多"
+other = "Més"
 # === Pagination ===
 
 # === partials/header.html ===
 [selectLanguage]
-other = "選擇語言"
+other = "Escolliu L'idioma"
 
 [switchTheme]
-other = "切換主題"
+other = "Canvia Tema"
 # === partials/header.html ===
 
 # === partials/footer.html ===
 [poweredBySome]
-other = "由 {{ .Hugo }} 強力驅動 | 主題 - {{ .Theme }}"
+other = "Impulsat per {{ .Hugo }} | Tema - {{ .Theme }}"
 # === partials/footer.html ===
 
 # === partials/comment.html ===
 [valineLang]
-other = "zh-TW"
+other = "en"
 
 [valinePlaceholder]
-other = "你的評論 ..."
+other = "El teu comentari ..."
 
 [facebookLanguageCode]
-other = "zh_TW"
+other = "ca_ES"
+
+[giscusLang]
+other = "en"
 # === partials/comment.html ===
 
 # === partials/assets.html ===
 [search]
-other = "搜索"
+other = "Buscar"
 
 [searchPlaceholder]
-other = "搜索文章標題或內容..."
+other = "Buscar títols o continguts..."
 
 [clear]
-other = "清空"
+other = "Esborra"
 
 [cancel]
-other = "取消"
+other = "Cancel·lar"
 
 [noResultsFound]
-other = "沒有找到結果"
+other = "Sense resultats"
 
 [lunrLanguageCode]
-other = "zh"
-
-[lunrLanguageLib]
-other = "lib/lunr/lunr.zh.js"
-
-[lunrSegmentitLib]
-other = "lib/lunr/lunr.segmentit.js"
+other = "ca"
 
 [copyToClipboard]
-other = "複製到剪貼板"
+other = "Copiar al portapapers"
 
 [cookieconsentMessage]
-other = "本網站使用 Cookies 來改善您的瀏覽體驗."
+other = "Aquest lloc web utilitza cookies per millorar la teva experiència."
 
 [cookieconsentDismiss]
-other = "同意"
+other = "Entenc!"
 
 [cookieconsentLink]
-other = "了解更多"
+other = "Més informació"
 # === partials/assets.html ===
 
 # === partials/plugin/share.html ===
 [shareOn]
-other = "分享到"
+other = "Comparteix a"
 # === partials/plugin/share.html ===
 
 # === posts/single.html ===
 [contents]
-other = "目錄"
+other = "Continguts"
 
 [publishedOnDate]
-other = "發佈於 {{ .Date }}"
+other = "publicat el {{ .Date }}"
 
 [includedInCategories]
-other = "收錄於 {{ .Categories }}"
+other = "inclòs en {{ .Categories }}"
 
 [wordCount]
-other = "約 {{ .Count }} 字"
+one = "Una paraula"
+other = "{{ .Count }} paraules"
 
 [readingTime]
-other = "預計閱讀 {{ .Count }} 分鐘"
+one = "Un minut"
+other = "{{ .Count }} minuts"
 
 [views]
-other = "次閱讀"
+other = "vistes"
 
 [author]
-other = "作者"
+other = "Autor"
 
 [updatedOnDate]
-other = "更新於 {{ .Date }}"
+other = "Actualitzat el {{ .Date }}"
 
 [readMarkdown]
-other = "閱讀原始文檔"
+other = "Llegeix Markdown"
 
 [back]
-other = "返回"
+other = "Tornar"
 
 [home]
-other = "主頁"
+other = "Inici"
 
 [readMore]
-other = "閱讀全文"
+other = "Llegeix Més"
 # === posts/single.html ===
 
 # === 404.html ===
 [pageNotFound]
-other = "頁面沒找到"
+other = "Pàgina no trobada"
 
 [pageNotFoundText]
-other = "抱歉，您要查找的頁面不存在。"
+other = "La pàgina que estàs buscant no existeix. Ho sento."
 # === 404.html ===
 
 # === shortcodes/admonition.html ===
 [note]
-other = "注意"
+other = "Nota"
 
 [abstract]
-other = "摘要"
+other = "Resum"
 
 [info]
-other = "信息"
+other = "Informació"
 
 [tip]
-other = "技巧"
+other = "Consell"
 
 [success]
-other = "成功"
+other = "Èxit"
 
 [question]
-other = "問題"
+other = "Pregunta"
 
 [warning]
-other = "警告"
+other = "Advertència"
 
 [failure]
-other = "失敗"
+other = "Fracàs"
 
 [danger]
-other = "危險"
+other = "Perill"
 
 [bug]
-other = "Bug"
+other = "Microbi"
 
 [example]
-other = "示例"
+other = "Exemple"
 
 [quote]
-other = "引用"
+other = "Citar"
 # === shortcodes/admonition.html ===
 
 # === shortcodes/version.html ===
 [new]
-other = "新增"
+other = "NOVA"
 
 [changed]
-other = "更改"
+other = "CANVIAT"
 
 [deleted]
-other = "刪除"
+other = "SUPRIMIT"
 # === shortcodes/version.html ===
