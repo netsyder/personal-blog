@@ -24,11 +24,10 @@ This article is incomplete, since I'm still learning Markdown and the features o
 
 The steps are as follows:
 
-1. Fix Network Config for IP Address Reservation
-1.1 (Optional) Change DNS Behavior
-2. Setup Cockpit
-3. Setup Docker
-4. Setup Portainer
+1. [Fix Network Config for IP Address Reservation](#fix-network-config-for-ip-address-reservation)
+2. [Setup Cockpit](#setup-cockpit)
+3. [Setup Docker](#setup-docker)
+4. [Setup Portainer](#setup-portainer)
 ---
 ## Fix Network Config for IP Address Reservation 
 
