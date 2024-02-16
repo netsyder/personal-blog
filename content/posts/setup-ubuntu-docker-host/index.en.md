@@ -35,13 +35,13 @@ What do I mean by this? Basically Ubuntu uses a Client-ID that is not the MAC Ad
 
 To set Ubuntu to use it's MAC as the Client-ID we need to edit the network configuration file located in `/etc/netplan/`. For that we issue the command:
 
-```Bash
+```posh
 sudo nano /etc/netplan/00-installer-config.yaml
 ```
 
 We are going to set our file as follows:
 
-```Bash
+```posh
 # This is the network config written by 'subiquity'
 network:
   ethernets:
@@ -59,7 +59,7 @@ Here we ensure Ubuntu uses its MAC address when requesting DHCP, we manually set
 
 By default Ubuntu uses resolvd for DNS resolution, which means it points all DNS request to the loopback IP 127.0.0.53. This is not an issue by itself, but it means that Ubuntu also keeps listening on port 53, which doesn't allows to host any service listening on this port. If you want to host Pi-Hole (Or any DNS server) on your Ubuntu instance, then we need to change this behavior by disabling resolved:
 
-```Bash
+```posh
 sudo systemctl disable systemd-resolved.service && sudo systemctl stop systemd-resolved
 ```
 
@@ -78,13 +78,13 @@ Let’s do just that.
 
 Log into your Ubuntu Server instance and issue the command:
 
-```Bash
+```posh
 `sudo apt-get install cockpit -y`
 ```
 
 Once the installation completes, start and enable Cockpit with:
 
-```Bash
+```posh
 `sudo systemctl enable --now cockpit.socket`
 ```
 
@@ -102,7 +102,7 @@ Open a web browser and point it to https://SERVER:9090. You should be greeted by
 
 1. Set up Docker's `apt` repository.
 
-```Bash
+```posh
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -119,12 +119,12 @@ sudo apt-get update
 ```
 2. Install the Docker Packages:
 
-```Bash
+```posh
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 3. Verify that the Docker Engine installation is successful by running the `hello-world` image.
 
-```Bash
+```posh
 sudo docker run hello-world
 ```
 ### Manage Docker as a non-root user
@@ -137,30 +137,30 @@ To create the `docker` group and add your user:
 
 1. Create the `docker` group:
 
-```Bash
+```posh
  sudo groupadd docker
 ```
 
 2. Add your user to the docker group:
 
-```Bash
+```posh
  sudo usermod -aG docker $USER
 ```
 3. Log out and log back in so that your group membership is re-evaluated. You can also run the following command to activate the changes to groups:
 
-```Bash
+```posh
 newgrp docker
 ```
 4. Verify that you can run `docker` commands without `sudo`:
 
-```Bash
+```posh
 docker run hello-world
 ```
 ### Configure Docker to start on boot with systemd
 
 On Debian and Ubuntu, the Docker service starts on boot by default. To automatically start Docker and containerd on boot for other Linux distributions using systemd, run the following commands:
 
-```Bash
+```posh
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
@@ -169,23 +169,23 @@ sudo systemctl enable containerd.service
 
 First, create the volume that Portainer Server will use to store its database:
 
-```Bash
+```posh
 docker volume create portainer_data
 ```
 Then, download and install the Portainer Server container:
-```Bash
+```posh
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 ```
 Portainer Server has now been installed. You can check to see whether the Portainer Server container has started by running `docker ps`:
 
-```Bash
+```posh
 root@server:~# docker ps
 CONTAINER ID   IMAGE                          COMMAND                  CREATED       STATUS      PORTS                                                                                  NAMES             
 dbf6a6d5019f   portainer/portainer-ce:latest  "/portainer"             4 weeks ago   Up 3 days   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp   portainer
 ```
 Now that the installation is complete, you can log into your Portainer Server instance by opening a web browser and going to:
 
-```Bash
+```posh
 https://localhost:9443
 ```
 Replace localhost with the relevant IP address or FQDN if needed, and adjust the port if you changed it earlier.
