@@ -90,7 +90,7 @@ Now that Cockpit is installed and running, you can log in.
 Open a web browser and point it to https://SERVER:9090. You should be greeted by the login screen (Figure A).
 
 <!---This is a placeholder for an image--->
-
+---
 # Setup Docker
 
 ## Install Docker from the repository
@@ -159,6 +159,7 @@ On Debian and Ubuntu, the Docker service starts on boot by default. To automatic
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
+---
 # Setup Portainer
 
 First, create the volume that Portainer Server will use to store its database:
