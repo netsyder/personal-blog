@@ -1,7 +1,7 @@
 ---
 title: "Bienvenid@!"
 date: 2024-02-05T11:27:40+08:00
-lastmod: 
+lastmod: 2024-02-16T02:35:45.517Z
 draft: false
 author: "Bersayder"
 authorLink: "https://netsyder.com"
@@ -16,9 +16,7 @@ categories: ["Blog"]
 
 lightgallery: true
 ---
-## Bienvenid@ a mi blog
-
-Desde hace un tiempo he estado buscando una manera de probar nuevas tecnologías y conceptos, a la vez que puedo presentar los conocimientos que he ido adquiriendo con el tiempo... Después de pensarlo mucho la repuesta se volvio super obvia: HACER UN BLOG!
+Desde hace un tiempo he estado buscando una manera de probar nuevas tecnologías y conceptos, a la vez que puedo presentar los conocimientos que he ido adquiriendo con el tiempo... Después de pensarlo mucho la repuesta se volvio super obvia: HACER UN BLOG!<!--more-->
 
 Aquí estaré posteando sobre cualquier cosa que me tenga entretenido fuera del trabajo, y me estaré enfocando en selfhosting ("Alojar y publicar servicios por mi mismo en mi propio hardware"), virtualización, contenedores, administración de la nube, y temas de TI en sentido general.
 

@@ -1,7 +1,7 @@
 ---
 title: "Welcome!"
 date: 2024-02-05T11:27:40+08:00
-lastmod: 
+lastmod: 2024-02-16T02:35:45.517Z
 draft: false
 author: "Bersayder"
 authorLink: "https://netsyder.com"
@@ -16,9 +16,7 @@ categories: ["Blog"]
 
 lightgallery: true
 ---
-## Welcome to my blog
-
-From some time I've been looking for a way to try out new technologies and concepts, and at the same time showcase the knowledge that I've been aquiring... After some thought the answer became pretty obvious: MAKE A BLOG!
+From some time I've been looking for a way to try out new technologies and concepts, and at the same time showcase the knowledge that I've been aquiring... After some thought the answer became pretty obvious: MAKE A BLOG!<!--more-->
 
 This blog will be hosting whatever I'm entertained with outside work, and I will be focused in selfhosting, virtualization, containerization, cloud management, and IT in general.
 
