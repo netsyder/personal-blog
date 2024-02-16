@@ -107,7 +107,7 @@
     # Custom content (HTML format is supported)
     custom = ""
     # whether to show Hugo and theme info
-    hugo = false
+    hugo = true
     # whether to show copyright info
     copyright = true
     # whether to show the author
@@ -204,10 +204,10 @@
   [params.social]
     GitHub = "netsyder"
     Linkedin = "bersayder"
-    Twitter = "bersayder"
+    Twitter = ""
     Instagram = ""
     Facebook = ""
-    Telegram = "bersayder"
+    Telegram = ""
     Medium = ""
     Gitlab = ""
     Youtubelegacy = ""
@@ -345,13 +345,13 @@
     [params.page.share]
       enable = true
       Twitter = true
-      Facebook = true
+      Facebook = false
       Linkedin = true
       Whatsapp = false
       Pinterest = false
       Tumblr = false
       HackerNews = false
-      Reddit = false
+      Reddit = true
       VK = false
       Buffer = false
       Xing = false
