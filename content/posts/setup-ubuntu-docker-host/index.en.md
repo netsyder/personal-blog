@@ -171,9 +171,9 @@ newgrp docker
 docker run hello-world
 ```
 
-### Configure Docker to start on boot with systemd
+### Configure Docker to start on boot
 
-On Debian and Ubuntu, the Docker service starts on boot by default. To automatically start Docker and containerd on boot for other Linux distributions using systemd, run the following commands:
+On Debian and Ubuntu, the Docker service starts on boot by default. If for some reason that is not the case with your installation, you can automatically start Docker and containerd on boot with the following commands:
 
 ```bash
 sudo systemctl enable docker.service
@@ -184,7 +184,11 @@ sudo systemctl enable containerd.service
 
 ## Setup Portainer
 
-First, create the volume that Portainer Server will use to store its database:
+Portainer is a powerful, open source toolset that allows you to easily build and manage containers in Docker, Docker Swarm, Kubernetes and Azure ACI.
+
+Portainer hides the complexity of managing containers behind an easy-to-use UI. By removing the need to use the CLI, write YAML or understand manifests, Portainer makes deploying apps and troubleshooting problems so easy that anyone can do it.
+
+To install Portainer, first we need to create the volume that it will use to store its database:
 
 ```bash
 docker volume create portainer_data

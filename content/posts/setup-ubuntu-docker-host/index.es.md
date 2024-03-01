@@ -160,7 +160,7 @@ newgrp docker
 docker run hello-world
 ```
 
-### Configurar Docker para que inicie en el encendido con systemd
+### Configurar Docker para que inicie con el servidor
 
 En Debian y Ubuntu, el servicio de Docker por defecto inicia con el encendido. Si por alguna razón no es tu caso, puedes iniciar Docker y containerd de manera automática en el encendido con los comandos siguientes:
 
@@ -173,13 +173,17 @@ sudo systemctl enable containerd.service
 
 ## Instalar y configurar Portainer {#setup-portainer}
 
-First, create the volume that Portainer Server will use to store its database:
+Portainer es una poderosa herramienta de código libre que permite crear y manejar contenedores de manera sencilla con Docker, Docker Swarm, Kubernetes y Azure ACI.
+
+Portainer esconde la complejidad de administrar contenedores detrás de una interfaz fácil de usar. Removiendo la necesidad de usar la consola, escribir YAML o entender archivos de manifests, Portainer hace que desplegar aplicaciones y resolver problemas sea tan fácil que cualquiera pueda hacerlo.
+
+Para instalar Portainer, primero necesitamos crearle un volumen para almacenar sus datos.
 
 ```bash
 docker volume create portainer_data
 ```
 
-Then, download and install the Portainer Server container:
+Luego, descargamos e instalamos el contenedor de Portainer:
 
 ```bash
 docker run -d -p 8000:8000 -p 9443:9443 \
@@ -188,7 +192,12 @@ docker run -d -p 8000:8000 -p 9443:9443 \
  -v portainer_data:/data portainer/portainer-ce:latest
 ```
 
+Por ultimo, podemos verificar que Portainer está corriendo usando el comando `docker ps`:
 Portainer Server has now been installed. You can check to see whether the Portainer Server container has started by running `docker ps`:
+
+    root@server:~# docker ps
+    CONTAINER ID   IMAGE                          COMMAND                  CREATED       STATUS      PORTS                                                                                  NAMES             
+    de5b28eb2fa9   portainer/portainer-ce:latest  "/portainer"             2 weeks ago   Up 9 days   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp   portainer
 
 Now that the installation is complete, you can log into your Portainer Server instance by opening a web browser and going to:
 
