@@ -16,18 +16,14 @@ categories: ["Home Lab"]
 
 lightgallery: true
 ---
-Este artículo es parte de una serie donde mostraré como tengo configurado mi Homelab. <!--more--> Esta serie no está en ningún orden en particular, así que vamos allá!
-
-{{<admonition warning "Nota: Trabajo en progreso" true>}}
-Este artículo esta incompleto, ya que todavía estoy aprendiendo a usar Markdown y las características de esta plantilla de Hugo.
-{{</admonition>}}
+Este artículo es parte de una serie donde mostraré como tengo configurado mi Homelab. <!--more-->
 
 Los pasos son los siguientes:
 
-1. [Editar la configuración de red para porder reservar una IP](#edit-network-config)
-2. [Instalar y configurar Cockpit](#setup-Cockpit)
-3. [Instalar y configurar Docker](#setup-docker)
-4. [Instalar y configurar Portainer](#setup-portainer)
+* [Editar la configuración de red para porder reservar una IP](#edit-network-config)
+* [Instalar y configurar Cockpit](#setup-Cockpit)
+* [Instalar y configurar Docker](#setup-docker)
+* [Instalar y configurar Portainer](#setup-portainer)
 
 ---
 
@@ -44,7 +40,7 @@ sudo nano /etc/netplan/00-installer-config.yaml
 Vamos a editar nuestro archivo cómo sigue:
 
 ```bash
-# This is the network config written by 'subiquity'
+# Esta es la configuración de red escrita por 'subiquity'
 network:
   ethernets:
     eth0:
@@ -76,7 +72,7 @@ Cockpit es una interfaz usuario que puedes abrir en tu navegador para administra
 
 Lamentablemente Cockpit no viene instalado en Ubuntu Server. Afortunadamente, el proceso de instalación de Cockpit en Ubuntu Server no es tan difícil, y vamos a hacer justamente eso.
 
-### Install Cockpit
+### Instalar Cockpit
 
 Conéctate a tu instancia de Ubuntu Server y ejecuta el siguiente comando:
 
@@ -90,31 +86,33 @@ Una vez terminada la instalación, habilita e inicia Cockpit con el comando:
 `sudo systemctl enable --now cockpit.socket`
 ```
 
-Ahora ya puedes inicia sesióne en Cockpit.
+Ahora ya puedes iniciar sesión en Cockpit.
 
 ### Iniciar sesión en Cockpit
 
-Abre un navegador web y coloca la dirección https://<IP de tu servidor>:9090. Te debería de aparecer una pantalla parecida a la siguiente:
+Abre un navegador web y coloca la dirección https://ip_del_servidor:9090. Te debería de aparecer una pantalla parecida a la siguiente:
 
 {{<image src="/images/cockpit-login-screen.png" caption="Pantalla de inicio de sesión de Cockpit" linked="false">}}
 
 ---
 
-## Setup Docker
+## Instalar y configurar Docker {#setup-docker}
 
-### Install Docker from the repository
+Es perfectamente posible y valido instalar Docker desde los repositorios de Ubuntu con el comando `sudo apt install docker.io -y`. Sin embargo, prefiero instalarlo directamente de los repositorios de Docker ya que son actualizados más frecuentemente y personalmente me gusta estar al día con el software que utilizo. La siguiente sección describe este proceso.
 
-1. Set up Docker's `apt` repository.
+### Instalar Docker desde su repositorio
+
+1. Configuramos el repositorio `apt` de Docker con los siguientes comandos:
 
 ```bash
-# Add Docker's official GPG key:
+# Añadimos la llave GPG oficial de Docker:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-# Add the repository to Apt sources:
+# Añadimos el repositorio a las fuentes Apt:
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \
   https://download.docker.com/linux/ubuntu \
@@ -123,7 +121,7 @@ echo \
 sudo apt-get update
 ```
 
-2. Install the Docker Packages:
+2. Instalamos los paquetes de Docker:
 
 ```bash
 sudo apt-get install \
@@ -133,47 +131,38 @@ sudo apt-get install \
   docker-compose-plugin
 ```
 
-3. Verify that the Docker Engine installation is successful by running the `hello-world` image.
+3. Verificamos que la instalación de Docker fué exitosa corriendo la imagen `hello-world` (Hola Mundo):
 
 ```bash
 sudo docker run hello-world
 ```
 
-### Manage Docker as a non-root user
+### Administrar Docker sin root
 
-The Docker daemon binds to a Unix socket, not a TCP port. By default it's the root user that owns the Unix socket, and other users can only access it using sudo. The Docker daemon always runs as the root user.
+El daemon de Docker se conecta a un socket Unix, no a un puerto TCP. De forma predeterminada, el usuario root es el propietario de dicho socket, y otros usuarios solo pueden acceder a él usando `sudo`. El daemon de Docker siempre se ejecuta como usuario root.
 
-If you don't want to preface the docker command with sudo, create a Unix group called docker and add users to it. When the Docker daemon starts, it creates a Unix socket accessible by members of the docker group. On some Linux distributions, the system automatically creates this group when installing Docker Engine using a package manager. In that case, there is no need for you to manually create the group.
+Si no quieres anteponer el comando `docker` con `sudo`, crea un grupo llamado docker y agréguele usuarios. Cuando el daemon de Docker inicia, se crea un socket Unix al que pueden acceder los miembros del grupo de Docker. En algunas distribuciones de Linux, el sistema crea automáticamente este grupo al instalar Docker mediante un administrador de paquetes. En ese caso, no es necesario crear manualmente el grupo.
 
-To create the `docker` group and add your user:
-
-1. Create the `docker` group:
+Para crear el grupo `docker` y agregar tu usuario, usa los siguientes comandos:
 
 ```bash
 sudo groupadd docker
-```
-
-2. Add your user to the docker group:
-
-```bash
 sudo usermod -aG docker $USER
 ```
-
-3. Log out and log back in so that your group membership is re-evaluated. You can also run the following command to activate the changes to groups:
+Luego cierra la sesión en inicia nuevamente para que se actualize la lista de grupos a las que pertenece el usuario, o activa los cambios con el comando:
 
 ```bash
 newgrp docker
 ```
-
-4. Verify that you can run `docker` commands without `sudo`:
+ Verifica que puedes correr los comandos de `docker` sin `sudo`:
 
 ```bash
 docker run hello-world
 ```
 
-### Configure Docker to start on boot with systemd
+### Configurar Docker para que inicie en el encendido con systemd
 
-On Debian and Ubuntu, the Docker service starts on boot by default. To automatically start Docker and containerd on boot for other Linux distributions using systemd, run the following commands:
+En Debian y Ubuntu, el servicio de Docker por defecto inicia con el encendido. Si por alguna razón no es tu caso, puedes iniciar Docker y containerd de manera automática en el encendido con los comandos siguientes:
 
 ```bash
 sudo systemctl enable docker.service
@@ -182,7 +171,7 @@ sudo systemctl enable containerd.service
 
 ---
 
-## Setup Portainer
+## Instalar y configurar Portainer {#setup-portainer}
 
 First, create the volume that Portainer Server will use to store its database:
 

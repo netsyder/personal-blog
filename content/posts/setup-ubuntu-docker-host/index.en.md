@@ -16,18 +16,14 @@ categories: ["Home Lab"]
 
 lightgallery: true
 ---
-This article is part of a serie that will show how I have setup my own homelab. <!--more-->This series won´t be in any particular order, so let's Begin.
-
-{{<admonition warning "Warning: Work in Progress" true>}}
-This article is incomplete, since I'm still learning Markdown and the features of this Hugo theme.
-{{</admonition>}}
+This article is part of a serie that will show how I have setup my own homelab. <!--more-->
 
 The steps are as follows:
 
-1. [Edit Network Config for IP Address Reservation](#edit-network-config)
-2. [Setup Cockpit](#setup-cockpit)
-3. [Setup Docker](#setup-docker)
-4. [Setup Portainer](#setup-portainer)
+* [Edit Network Config for IP Address Reservation](#edit-network-config)
+* [Setup Cockpit](#setup-cockpit)
+* [Setup Docker](#setup-docker)
+* [Setup Portainer](#setup-portainer)
 
 ---
 
@@ -96,13 +92,15 @@ Now that Cockpit is installed and running, you can log in.
 
 ### Log into Cockpit
 
-Open a web browser and point it to https://<Your Server IP>:9090. You should be greeted by the login screen:
+Open a web browser and point it to https://your_server_ip:9090. You should be greeted by the login screen:
 
 {{<image src="/images/cockpit-login-screen.png" caption="Cockpit Login Screen" linked="false">}}
 
 ---
 
 ## Setup Docker
+
+It is perfectly possible and valid install Docker from the default Ubuntu repository with the command `sudo apt install docker.io -y`. However, I prefer to install Docker directly from it's official repositories due to the simple fact that they are updated more frequently and I personally like to be up to date with the software I use. This process is explained in the following section.
 
 ### Install Docker from the repository
 
@@ -143,9 +141,9 @@ sudo docker run hello-world
 
 ### Manage Docker as a non-root user
 
-The Docker daemon binds to a Unix socket, not a TCP port. By default it's the root user that owns the Unix socket, and other users can only access it using sudo. The Docker daemon always runs as the root user.
+The Docker daemon binds to a Unix socket, not a TCP port. By default it's the root user that owns the Unix socket, and other users can only access it using `sudo`. The Docker daemon always runs as the root user.
 
-If you don't want to preface the docker command with sudo, create a Unix group called docker and add users to it. When the Docker daemon starts, it creates a Unix socket accessible by members of the docker group. On some Linux distributions, the system automatically creates this group when installing Docker Engine using a package manager. In that case, there is no need for you to manually create the group.
+If you don't want to preface the docker command with `sudo`, create a Unix group called docker and add users to it. When the Docker daemon starts, it creates a Unix socket accessible by members of the docker group. On some Linux distributions, the system automatically creates this group when installing Docker Engine using a package manager. In that case, there is no need for you to manually create the group.
 
 To create the `docker` group and add your user:
 
