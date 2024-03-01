@@ -9,7 +9,7 @@ description: "This is the first post on this blog that I don't know what is it f
 images: []
 resources:
 - name: "featured-image"
-  src: "images/Sky.png"
+  src: "Sky.png"
 
 tags: ["blog"]
 categories: ["Blog"]

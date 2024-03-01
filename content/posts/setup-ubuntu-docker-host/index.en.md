@@ -9,7 +9,7 @@ description: "First of a series of tutorials about my homelab in no particular o
 images: []
 resources:
 - name: "featured-image"
-  src: "/images/Ubuntu_Docker.png"
+  src: "Ubuntu_Docker.png"
 
 tags: ["Home Lab", "Linux", "Ubuntu", "Docker", "Portainer","Cockpit"]
 categories: ["Home Lab"]
@@ -98,7 +98,7 @@ Now that Cockpit is installed and running, you can log in.
 
 Open a web browser and point it to https://<Your Server IP>:9090. You should be greeted by the login screen:
 
-{{< image src="/images/cockpit-login-screen.png" caption="Cockpit Login Screen">}}
+{{<image src="/images/cockpit-login-screen.png" caption="Cockpit Login Screen">}}
 ---
 
 ## Setup Docker

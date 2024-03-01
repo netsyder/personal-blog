@@ -2,14 +2,14 @@
 title: "Cómo configurar Ubuntu como un host de Docker"
 date: 2024-02-16T02:35:45.517Z
 lastmod: 
-draft: true
+draft: false
 author: "Bersayder"
 authorLink: "https://netsyder.com"
 description: "Primero de una serie de artículos sobre mi Homelab sin ningún orden en particular"
 images: []
 resources:
 - name: "featured-image"
-  src: "/images/Ubuntu_Docker.png"
+  src: "Ubuntu_Docker.png"
 
 tags: ["Home Lab", "Linux", "Ubuntu", "Docker", "Portainer","Cockpit"]
 categories: ["Home Lab"]
@@ -96,7 +96,7 @@ Ahora ya puedes inicia sesióne en Cockpit.
 
 Abre un navegador web y coloca la dirección https://<IP de tu servidor>:9090. Te debería de aparecer una pantalla parecida a la siguiente:
 
-{{< image src="/images/cockpit-login-screen.png" caption="Pantalla de inicio de sesión de Cockpit">}}
+{{<image src="/images/cockpit-login-screen.png" caption="Pantalla de inicio de sesión de Cockpit">}}
 ---
 
 ## Setup Docker

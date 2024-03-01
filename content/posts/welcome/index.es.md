@@ -9,7 +9,7 @@ description: "Este es el primer post en este blog que realmente todavía no se p
 images: []
 resources:
 - name: "featured-image"
-  src: "images/Sky.png"
+  src: "Sky.png"
 
 tags: ["blog"]
 categories: ["Blog"]
