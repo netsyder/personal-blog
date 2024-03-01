@@ -190,13 +190,11 @@ docker run -d -p 8000:8000 -p 9443:9443 \
 
 Por ultimo, podemos verificar que Portainer está corriendo usando el comando `docker ps`:
 
-```bash
+{{<highlight bash>}}
 root@server:~# docker ps
-CONTAINER ID   IMAGE                          COMMAND       CREATED       STATUS
-   PORTS                                            NAMES             
-de5b28eb2fa9   portainer/portainer-ce:latest  "/portainer"  4 weeks ago   Up 3 days
-   0.0.0.0:8000->8000/tcp, 0.0.0.0:9443->9443/tcp   portainer
-```
+CONTAINER ID   IMAGE                          COMMAND       CREATED       STATUS      PORTS                                            NAMES             
+de5b28eb2fa9   portainer/portainer-ce:latest  "/portainer"  4 weeks ago   Up 3 days   0.0.0.0:8000->8000/tcp, 0.0.0.0:9443->9443/tcp   portainer
+{{</highlight>}}
 
 Ahora ya puedes iniciar sesión en Portainer abriendo un navegador web y colocando la dirección `https://ip_del_servidor:9443`. Te debería de aparecer una pantalla parecida a la siguiente:
 
