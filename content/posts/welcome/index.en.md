@@ -9,14 +9,14 @@ description: "This is the first post on this blog that I don't know what is it f
 images: []
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "images/Sky.png"
 
 tags: ["blog"]
 categories: ["Blog"]
 
 lightgallery: true
 ---
-From some time I've been looking for a way to try out new technologies and concepts, and at the same time showcase the knowledge that I've been aquiring... After some thought the answer became pretty obvious: MAKE A BLOG!<!--more-->
+From some time I've been looking for a way to try out new technologies and concepts, and at the same time showcase the knowledge that I've been acquiring... After some thought the answer became pretty obvious: MAKE A BLOG!<!--more-->
 
 This blog will be hosting whatever I'm entertained with outside work, and I will be focused in selfhosting, virtualization, containerization, cloud management, and IT in general.
 

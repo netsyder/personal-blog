@@ -9,14 +9,14 @@ description: "First of a series of tutorials about my homelab in no particular o
 images: []
 resources:
 - name: "featured-image"
-  src: "Ubuntu_Docker.png"
+  src: "images/Ubuntu_Docker.png"
 
 tags: ["Home Lab", "Linux", "Ubuntu", "Docker", "Portainer","Cockpit"]
 categories: ["Home Lab"]
 
 lightgallery: true
 ---
-This article is part of a serie that will show how I have setup my own homelab after learning how to do it from multiple places on the internet. <!--more-->This serie won´t be in any particular order, so let's Begin.
+This article is part of a serie that will show how I have setup my own homelab. <!--more-->This series won´t be in any particular order, so let's Begin.
 
 {{<admonition warning "Warning: Work in Progress" true>}}
 This article is incomplete, since I'm still learning Markdown and the features of this Hugo theme.
@@ -24,13 +24,14 @@ This article is incomplete, since I'm still learning Markdown and the features o
 
 The steps are as follows:
 
-1. [Fix Network Config for IP Address Reservation](#fix-network-config-for-ip-address-reservation)
+1. [Edit Network Config for IP Address Reservation](#edit-network-config)
 2. [Setup Cockpit](#setup-cockpit)
 3. [Setup Docker](#setup-docker)
 4. [Setup Portainer](#setup-portainer)
 
 ---
-## Fix Network Config for IP Address Reservation 
+
+## Fix Network Config for IP Address Reservation {#edit-network-config}
 
 What do I mean by this? Basically Ubuntu uses a Client-ID that is not the MAC Address when sending a DHCP request. This means that if you create an IP reservation on your DHCP server, *maybe* your Ubuntu server will receive a different IP address instead of said reservation. This depends entirely on the behavior of the DHCP server, but to prevent this issue we can force our server to use its MAC Address as the Client-ID.
 
@@ -46,7 +47,7 @@ We are going to set our file as follows:
 # This is the network config written by 'subiquity'
 network:
   ethernets:
-    ens3:
+    eth0:
       dhcp4: true
       dhcp-identifier: mac
       nameservers:
@@ -55,7 +56,7 @@ network:
   renderer: NetworkManager
 ```
 
-Here we ensure Ubuntu uses its MAC address when requesting DHCP, we manually set the DNS servers and make sure it uses Network Manager as the network config renderer.
+Here the network card is listed as `eth0`, and we ensure Ubuntu uses its MAC address when requesting DHCP with the line `dhcp-identifier: mac`. We also set the DNS servers with the `nameservers` block and make sure it uses [Network Manager](https://ubuntu.com/core/docs/networkmanager) as the network config renderer with `renderer: NetworkManager`. Please be mindful of the indentation.
 
 ### Change DNS Behavior (Optional, but needed to host Pi-Hole)
 
@@ -65,7 +66,7 @@ By default Ubuntu uses resolvd for DNS resolution, which means it points all DNS
 sudo systemctl disable systemd-resolved.service && sudo systemctl stop systemd-resolved
 ```
 
-Set your DNS server in `/etc/resolv.conf` to your prefered DNS server instead of 127.0.0.53.
+Set your DNS server in `/etc/resolv.conf` to your preferred DNS server instead of 127.0.0.53.
 
 ---
 
@@ -95,9 +96,9 @@ Now that Cockpit is installed and running, you can log in.
 
 ### Log into Cockpit
 
-Open a web browser and point it to https://SERVER:9090. You should be greeted by the login screen (Figure A).
+Open a web browser and point it to https://<Your Server IP>:9090. You should be greeted by the login screen:
 
-<!---This is a placeholder for an image--->
+{{< image src="/images/cockpit-login-screen.png" caption="Cockpit Login Screen">}}
 ---
 
 ## Setup Docker
