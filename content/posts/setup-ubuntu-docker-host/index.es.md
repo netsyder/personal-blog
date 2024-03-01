@@ -86,7 +86,7 @@ Una vez terminada la instalación, habilita e inicia Cockpit con el comando:
 `sudo systemctl enable --now cockpit.socket`
 ```
 
-Ahora ya puedes iniciar sesión en Cockpit abriendo un navegador web y colocando la dirección https://ip_del_servidor:9090. Te debería de aparecer una pantalla parecida a la siguiente:
+Ahora ya puedes iniciar sesión en Cockpit abriendo un navegador web y colocando la dirección `https://ip_del_servidor:9090`. Te debería de aparecer una pantalla parecida a la siguiente:
 
 {{<image src="/images/cockpit-login-screen.png" caption="Pantalla de inicio de sesión de Cockpit" linked="false">}}
 
@@ -192,12 +192,12 @@ Por ultimo, podemos verificar que Portainer está corriendo usando el comando `d
 
 ```bash
 root@server:~# docker ps
-CONTAINER ID   IMAGE                          COMMAND                  CREATED       STATUS
-   PORTS                                                                                  NAMES             
-de5b28eb2fa9   portainer/portainer-ce:latest  "/portainer"             4 weeks ago   Up 3 days
-   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp   portainer
+CONTAINER ID   IMAGE                          COMMAND       CREATED       STATUS
+   PORTS                                            NAMES             
+de5b28eb2fa9   portainer/portainer-ce:latest  "/portainer"  4 weeks ago   Up 3 days
+   0.0.0.0:8000->8000/tcp, 0.0.0.0:9443->9443/tcp   portainer
 ```
 
-Ahora ya puedes iniciar sesión en Portainer abriendo un navegador web y colocando la dirección https://ip_del_servidor:9443. Te debería de aparecer una pantalla parecida a la siguiente:
+Ahora ya puedes iniciar sesión en Portainer abriendo un navegador web y colocando la dirección `https://ip_del_servidor:9443`. Te debería de aparecer una pantalla parecida a la siguiente:
 
 {{<image src="/images/portainer-first-login.png" caption="Pantalla Inicial de Portainer" linked="false">}}

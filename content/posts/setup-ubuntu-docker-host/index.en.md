@@ -88,7 +88,7 @@ Once the installation completes, start and enable Cockpit with:
 `sudo systemctl enable --now cockpit.socket`
 ```
 
-Now that Cockpit is installed and running, you can log in by opening a web browser and point it to https://your_server_ip:9090. You should be greeted by the login screen:
+Now that Cockpit is installed and running, you can log in by opening a web browser and point it to `https://your_server_ip:9090`. You should be greeted by the login screen:
 
 {{<image src="/images/cockpit-login-screen.png" caption="Cockpit Login Screen" linked="false">}}
 
@@ -203,12 +203,12 @@ Portainer Server has now been installed. You can check to see whether the Portai
 
 ```bash
 root@server:~# docker ps
-CONTAINER ID   IMAGE                          COMMAND                  CREATED       STATUS
-   PORTS                                                                                  NAMES             
-de5b28eb2fa9   portainer/portainer-ce:latest  "/portainer"             4 weeks ago   Up 3 days
-   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp   portainer
+CONTAINER ID   IMAGE                          COMMAND       CREATED       STATUS
+   PORTS                                            NAMES             
+de5b28eb2fa9   portainer/portainer-ce:latest  "/portainer"  4 weeks ago   Up 3 days
+   0.0.0.0:8000->8000/tcp, 0.0.0.0:9443->9443/tcp   portainer
 ```
 
-Now that Portainer is up and running, you can log in by opening a web browser and point it to https://your_server_ip:9443. You should be greeted by the setup screen:
+Now that Portainer is up and running, you can log in by opening a web browser and point it to `https://your_server_ip:9443`. You should be greeted by the setup screen:
 
 {{<image src="/images/portainer-first-login.png" caption="Portainer Setup Screen" linked="false">}}
