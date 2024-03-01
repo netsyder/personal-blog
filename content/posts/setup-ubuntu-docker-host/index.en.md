@@ -1,7 +1,7 @@
 ---
 title: "How to setup Ubuntu as a Docker Host"
 date: 2024-02-16T02:35:45.517Z
-lastmod: 2024-03-01T02:28:24.611Z
+lastmod: 2024-03-01T03:17:05.984Z
 draft: false
 author: "Bersayder"
 authorLink: "https://netsyder.com"
@@ -88,11 +88,7 @@ Once the installation completes, start and enable Cockpit with:
 `sudo systemctl enable --now cockpit.socket`
 ```
 
-Now that Cockpit is installed and running, you can log in.
-
-### Log into Cockpit
-
-Open a web browser and point it to https://your_server_ip:9090. You should be greeted by the login screen:
+Now that Cockpit is installed and running, you can log in by opening a web browser and point it to https://your_server_ip:9090. You should be greeted by the login screen:
 
 {{<image src="/images/cockpit-login-screen.png" caption="Cockpit Login Screen" linked="false">}}
 
@@ -205,12 +201,14 @@ docker run -d -p 8000:8000 -p 9443:9443 \
 
 Portainer Server has now been installed. You can check to see whether the Portainer Server container has started by running `docker ps`:
 
-Now that the installation is complete, you can log into your Portainer Server instance by opening a web browser and going to:
-
 ```bash
-https://localhost:9443
+root@server:~# docker ps
+CONTAINER ID   IMAGE                          COMMAND                  CREATED       STATUS
+   PORTS                                                                                  NAMES             
+de5b28eb2fa9   portainer/portainer-ce:latest  "/portainer"             4 weeks ago   Up 3 days
+   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp   portainer
 ```
 
-Replace localhost with the relevant IP address or FQDN if needed, and adjust the port if you changed it earlier.
+Now that Portainer is up and running, you can log in by opening a web browser and point it to https://your_server_ip:9443. You should be greeted by the setup screen:
 
-You will be presented with the initial setup page for Portainer Server.
+{{<image src="/images/portainer-first-login.png" caption="Portainer Setup Screen" linked="false">}}

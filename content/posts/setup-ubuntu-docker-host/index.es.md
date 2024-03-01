@@ -1,7 +1,7 @@
 ---
 title: "Cómo configurar Ubuntu como un host de Docker"
 date: 2024-02-16T02:35:45.517Z
-lastmod: 2024-03-01T02:28:24.611Z
+lastmod: 2024-03-01T03:17:05.984Z
 draft: false
 author: "Bersayder"
 authorLink: "https://netsyder.com"
@@ -86,11 +86,7 @@ Una vez terminada la instalación, habilita e inicia Cockpit con el comando:
 `sudo systemctl enable --now cockpit.socket`
 ```
 
-Ahora ya puedes iniciar sesión en Cockpit.
-
-### Iniciar sesión en Cockpit
-
-Abre un navegador web y coloca la dirección https://ip_del_servidor:9090. Te debería de aparecer una pantalla parecida a la siguiente:
+Ahora ya puedes iniciar sesión en Cockpit abriendo un navegador web y colocando la dirección https://ip_del_servidor:9090. Te debería de aparecer una pantalla parecida a la siguiente:
 
 {{<image src="/images/cockpit-login-screen.png" caption="Pantalla de inicio de sesión de Cockpit" linked="false">}}
 
@@ -193,18 +189,15 @@ docker run -d -p 8000:8000 -p 9443:9443 \
 ```
 
 Por ultimo, podemos verificar que Portainer está corriendo usando el comando `docker ps`:
-Portainer Server has now been installed. You can check to see whether the Portainer Server container has started by running `docker ps`:
-
-    root@server:~# docker ps
-    CONTAINER ID   IMAGE                          COMMAND                  CREATED       STATUS      PORTS                                                                                  NAMES             
-    de5b28eb2fa9   portainer/portainer-ce:latest  "/portainer"             2 weeks ago   Up 9 days   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp   portainer
-
-Now that the installation is complete, you can log into your Portainer Server instance by opening a web browser and going to:
 
 ```bash
-https://localhost:9443
+root@server:~# docker ps
+CONTAINER ID   IMAGE                          COMMAND                  CREATED       STATUS
+   PORTS                                                                                  NAMES             
+de5b28eb2fa9   portainer/portainer-ce:latest  "/portainer"             4 weeks ago   Up 3 days
+   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp, 0.0.0.0:9443->9443/tcp, :::9443->9443/tcp   portainer
 ```
 
-Replace localhost with the relevant IP address or FQDN if needed, and adjust the port if you changed it earlier.
+Ahora ya puedes iniciar sesión en Portainer abriendo un navegador web y colocando la dirección https://ip_del_servidor:9443. Te debería de aparecer una pantalla parecida a la siguiente:
 
-You will be presented with the initial setup page for Portainer Server.
+{{<image src="/images/portainer-first-login.png" caption="Pantalla Inicial de Portainer" linked="false">}}
