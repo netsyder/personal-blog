@@ -1,5 +1,5 @@
 ---
-title: "Bienvenid@!"
+title: "Bienvenidos!"
 date: 2024-02-05T11:27:40+08:00
 lastmod: 2024-02-16T02:35:45.517Z
 draft: false
