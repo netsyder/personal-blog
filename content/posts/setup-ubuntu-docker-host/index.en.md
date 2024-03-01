@@ -9,7 +9,7 @@ description: "First of a series of tutorials about my homelab in no particular o
 images: []
 resources:
 - name: "featured-image"
-  src: "images/Ubuntu_Docker.png"
+  src: "/images/Ubuntu_Docker.png"
 
 tags: ["Home Lab", "Linux", "Ubuntu", "Docker", "Portainer","Cockpit"]
 categories: ["Home Lab"]

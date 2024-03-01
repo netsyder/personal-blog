@@ -9,7 +9,7 @@ description: "Primero de una serie de artículos sobre mi Homelab sin ningún or
 images: []
 resources:
 - name: "featured-image"
-  src: "images/Ubuntu_Docker.png"
+  src: "/images/Ubuntu_Docker.png"
 
 tags: ["Home Lab", "Linux", "Ubuntu", "Docker", "Portainer","Cockpit"]
 categories: ["Home Lab"]
