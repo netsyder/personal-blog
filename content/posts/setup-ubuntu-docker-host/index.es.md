@@ -97,6 +97,7 @@ Ahora ya puedes inicia sesióne en Cockpit.
 Abre un navegador web y coloca la dirección https://<IP de tu servidor>:9090. Te debería de aparecer una pantalla parecida a la siguiente:
 
 {{<image src="/images/cockpit-login-screen.png" caption="Pantalla de inicio de sesión de Cockpit" linked=false>}}
+
 ---
 
 ## Setup Docker
