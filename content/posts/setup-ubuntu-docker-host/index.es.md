@@ -1,7 +1,7 @@
 ---
 title: "Cómo configurar Ubuntu como un host de Docker"
 date: 2024-02-16T02:35:45.517Z
-lastmod: 
+lastmod: 2024-03-01T02:28:24.611Z
 draft: false
 author: "Bersayder"
 authorLink: "https://netsyder.com"
@@ -20,8 +20,8 @@ Este artículo es parte de una serie donde mostraré como tengo configurado mi H
 
 Los pasos son los siguientes:
 
-* [Editar la configuración de red para porder reservar una IP](#edit-network-config)
-* [Instalar y configurar Cockpit](#setup-Cockpit)
+* [Editar la configuración de red para poder reservar una IP](#edit-network-config)
+* [Instalar y configurar Cockpit](#setup-cockpit)
 * [Instalar y configurar Docker](#setup-docker)
 * [Instalar y configurar Portainer](#setup-portainer)
 
@@ -66,7 +66,7 @@ También debes de especificar tu servidor de DNS preferido en el archivo `/etc/r
 
 ---
 
-## Instalar y configurar Cockpit {#setup-Cockpit}
+## Instalar y configurar Cockpit {#setup-cockpit}
 
 Cockpit es una interfaz usuario que puedes abrir en tu navegador para administrar servidores Linux, y normalmente viene instalado por defecto en distribuciones basadas en RHEL, como Red Hat Enterprise Linux, CentOS Stream, Rocky Linux y AlmaLinux. Es una excelente manera de controlar sus servidores, administrar usuarios/grupos/almacenamiento/servicios, actualizar software, ver registros y mucho más.
 
