@@ -27,7 +27,7 @@ Los pasos son los siguientes:
 
 ---
 
-## Editar la configuración de red para poder reservar una dirección IP {#edit-network-config}
+## Editar la configuración de red {#edit-network-config}
 
 ¿Que significa esto? Básicamente Ubuntu usa un Client-ID que no es su dirección MAC cuando solicita DHCP. Esto significa que si creas una reservación para Ubuntu en tu servidor de DHCP, *lo más probable* sea que tu cliente reciba una dirección IP diferente a la que se reservó. Esto depende del comportamiento del servidor DHCP, así que para no dejarlo a la suerte podemos forzar Ubuntu a usar su dirección MAC cómo su Client-ID.
 

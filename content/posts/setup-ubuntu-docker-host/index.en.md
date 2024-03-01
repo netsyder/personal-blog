@@ -27,7 +27,7 @@ The steps are as follows:
 
 ---
 
-## Fix Network Config for IP Address Reservation {#edit-network-config}
+## Edit Network Config {#edit-network-config}
 
 What do I mean by this? Basically Ubuntu uses a Client-ID that is not the MAC Address when sending a DHCP request. This means that if you create an IP reservation on your DHCP server, *maybe* your Ubuntu server will receive a different IP address instead of said reservation. This depends entirely on the behavior of the DHCP server, but to prevent this issue we can force our server to use its MAC Address as the Client-ID.
 
