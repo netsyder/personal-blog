@@ -54,7 +54,7 @@ network:
 
 Aquí la tarjeta de red aparece cómo `eth0` (puede ser diferente en tu caso), y nos aseguramos de que Ubuntu use su MAC como su Client-ID al agregar la línea `dhcp-identifier: mac`. También agregamos nuestros servidores DNS favoritos con el bloque `nameservers` y nos aseguramos que use Network Manager como su renderizador de red por defecto con `renderer: NetworkManager`. Por favor ten en cuenta la jerarquía de las sangrías.
 
-### Cambiar el comportamiento de DNS (Opcional, pero necesario si vas a instalar Pi-Hole)
+### Cambiar el comportamiento de DNS (Opcional)
 
 De forma predeterminada, Ubuntu usa resolvd para la resolución de DNS, lo que significa que apunta todas las solicitudes de DNS a la IP 127.0.0.53. Esto no es un problema en sí mismo, pero significa que Ubuntu se mantiene escuchando en el puerto 53, lo que impide que ningún servicio pueda escuchar en este puerto. Si deseas instalar Pi-Hole (o cualquier otro servidor DNS) en tu instancia de Ubuntu, entonces necesitas cambiar este comportamiento deshabilitando resolvd:
 

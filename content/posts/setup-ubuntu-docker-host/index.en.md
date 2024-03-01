@@ -54,7 +54,7 @@ network:
 
 Here the network card is listed as `eth0`, and we ensure Ubuntu uses its MAC address when requesting DHCP with the line `dhcp-identifier: mac`. We also set the DNS servers with the `nameservers` block and make sure it uses [Network Manager](https://ubuntu.com/core/docs/networkmanager) as the network config renderer with `renderer: NetworkManager`. Please be mindful of the indentation.
 
-### Change DNS Behavior (Optional, but needed to host Pi-Hole)
+### Change DNS Behavior (Optional)
 
 By default Ubuntu uses resolvd for DNS resolution, which means it points all DNS request to the loopback IP 127.0.0.53. This is not an issue by itself, but it means that Ubuntu also keeps listening on port 53, which doesn't allows to host any service listening on this port. If you want to host Pi-Hole (Or any DNS server) on your Ubuntu instance, then we need to change this behavior by disabling resolved:
 
