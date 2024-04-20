@@ -82,6 +82,9 @@
   images = []
   enableEmoji = true
 
+  PygmentsCodeFences = true
+  PygmentsStyle = "github-dark"
+
   # Header config
   [params.header]
     # desktop header mode ["fixed", "normal", "auto"]
